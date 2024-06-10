@@ -40,13 +40,13 @@
         android:id="@+id/lowestTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="177dp"
-        android:layout_marginBottom="605dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="38dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/typeOfDay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/highestTemp" />
@@ -55,8 +55,34 @@
         android:id="@+id/typeOfDay"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="192dp" />
+        app:layout_constraintTop_toBottomOf="@+id/lowestTemp" />
+
+    <TextView
+        android:id="@+id/avgTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="387dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="109dp"
+        android:text="average temp ths week is"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeOfDay"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/inputBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="33dp"
+        android:text="Input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
