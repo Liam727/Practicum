@@ -16,15 +16,19 @@ class MainActivity : AppCompatActivity() {
         val enterBtn=findViewById<Button>(R.id.enterBtn)
         val nameText=findViewById<TextView>(R.id.nameText)
 
+        //Button used to continue to the next screen
         enterBtn.setOnClickListener {
             val intent = Intent(this,MainActivity2::class.java)
             startActivity(intent)
         }
+        //Button used to exit the programme
         exitBtn.setOnClickListener {
             val intent =Intent(this,MainActivity2::class.java)
             startActivity(Intent())
 
         }
+
+
 
     }
 }

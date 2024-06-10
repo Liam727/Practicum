@@ -11,6 +11,7 @@ import android.widget.TextView
 
 class MainActivity2 : AppCompatActivity() {
 
+    //Options of the different typres of day are given for users to input
     enum class Day {
         Sunny,
         Cloudy,
@@ -35,33 +36,23 @@ class MainActivity2 : AppCompatActivity() {
         val avgTemp=findViewById<TextView>(R.id.avgTemp)
         val inputBtn=findViewById<Button>(R.id.inputBtn)
 
-
+//Spinner used to give more detail on the day
         typeOfDay.adapter= ArrayAdapter<MainActivity2.Day>(
             this,
             android.R.layout.simple_list_item_1,
             Day.values()
         )
-
+//Button used to move to the next screen
         nxtBtn.setOnClickListener {
             val intent = Intent(this,MainActivity3::class.java)
             startActivity(intent)
         }
-
+//button used to input data that the user mae
         inputBtn.setOnClickListener {
             val text=highestTemp.text.toString()
             avgTemp.text=text
         }
-
-
-
-
-
-
-
-
     }
-
-
-    }
+}
 
 
