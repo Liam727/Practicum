@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         exitBtn.setOnClickListener {
             val intent =Intent(this,MainActivity2::class.java)
             startActivity(Intent())
+
         }
 
     }
